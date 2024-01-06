@@ -10,7 +10,7 @@ bot.command("start", async (ctx: Context) => {
 });
 
 bot.on("message", async (ctx: Context) => {
-  if (ctx.chat?.id == -1001538721471) {
+  if (ctx.chat?.id != -1001538721471) {
     await ctx.forwardMessage("-1001538721471", ctx.message)
     await ctx.react("👍")
     await ctx.reply(
