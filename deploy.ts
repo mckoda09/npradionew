@@ -1,7 +1,6 @@
-import { webhookCallback } from "https://deno.land/x/grammy@v1.19.0/mod.ts";
+import { webhookCallback } from "https://deno.land/x/grammy@v1.20.2/mod.ts";
 import bot from "./mod.ts";
 
-// @ts-ignore: bot is ok
 const handleUpdate = webhookCallback(bot, "std/http");
 
 Deno.serve(async (req) => {
